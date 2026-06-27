@@ -1,92 +1,124 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import CanvasParticles from '../Common/CanvasParticles';
-import { useParallax } from '../../hooks/useParallax';
 import './Hero.css';
 
-const Hero = () => {
-  const imgRef = useParallax(0.12);
-  const orbRef = useParallax(0.06, true);
+const slides = [
+  {
+    id: 1,
+    image: '/images/hero_slide_1.png',
+    badge: '⚡ NEW DROPS',
+    title: 'THE TUNNEL',
+    highlight: 'COLLECTION',
+    subtitle: 'Where legends are born.',
+  },
+  {
+    id: 2,
+    image: '/images/hero_slide_2.png',
+    badge: '🔥 PREMIUM TIER',
+    title: 'LOCKER ROOM',
+    highlight: 'EDITION',
+    subtitle: 'Step into the spotlight.',
+  },
+  {
+    id: 3,
+    image: '/images/hero_slide_3.png',
+    badge: '⭐ EXCLUSIVE',
+    title: 'STREET x',
+    highlight: 'PITCH',
+    subtitle: 'Style that transcends the game.',
+  }
+];
 
-  // Text stagger on mount
-  const textRef = useRef(null);
+const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-advance slides
   useEffect(() => {
-    const els = textRef.current?.querySelectorAll('[data-stagger]') || [];
-    els.forEach((el, i) => {
-      setTimeout(() => el.classList.add('stagger-in'), i * 120 + 200);
-    });
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="hero">
-      {/* Canvas particle background */}
-      <CanvasParticles />
+    <section className="hero-cinematic">
+      {/* Background Slides */}
+      {slides.map((slide, index) => (
+        <div 
+          key={slide.id} 
+          className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
+        >
+          <div 
+            className="hero-slide-bg"
+            style={{ backgroundImage: `url(${slide.image})` }}
+          />
+          {/* Overlay gradient for text readability */}
+          <div className="hero-overlay" />
+        </div>
+      ))}
 
-      {/* Ambient glow orbs */}
-      <div className="hero-orb hero-orb--1" ref={orbRef} />
-      <div className="hero-orb hero-orb--2" />
-      <div className="hero-orb hero-orb--3" />
+      {/* Content overlay */}
+      <div className="hero-content-wrapper">
+        <div className="container hero-content-inner">
+          <div className="hero-text-block">
+            {/* We map over slides again just for the text to animate in properly on change */}
+            {slides.map((slide, index) => (
+              <div 
+                key={`text-${slide.id}`} 
+                className={`hero-text-content ${index === currentSlide ? 'active' : ''}`}
+              >
+                <span className="hero-badge">{slide.badge}</span>
+                <h1>
+                  {slide.title}<br />
+                  <span className="highlight">{slide.highlight}</span>
+                </h1>
+                <p className="hero-subtitle">{slide.subtitle}</p>
+                <p className="hero-description">
+                  Uncompromised quality. Perfect fit. Your premium destination for dry-fit replica football and cricket jerseys.
+                </p>
+              </div>
+            ))}
 
-      <div className="container hero-content" ref={textRef}>
-        {/* Text side */}
-        <div className="hero-text">
-          <span className="hero-badge" data-stagger>⚡ PREMIUM JERSEYS</span>
-
-          <h1 data-stagger>
-            KICKIN<br />
-            <span className="highlight">BANANA</span>
-          </h1>
-
-          <p className="hero-subtitle" data-stagger>
-            Uncompromised Quality. Perfect Fit.
-          </p>
-
-          <p className="hero-description" data-stagger>
-            Your premium destination for dry-fit replica football and cricket jerseys.
-            Custom name &amp; number styling details tailored to match official player standards.
-          </p>
-
-          <div className="hero-cta" data-stagger>
-            <Link to="/collections" className="btn-primary hero-btn-primary">
-              SHOP COLLECTION
-            </Link>
-            <Link to="/custom" className="btn-secondary">
-              CUSTOM JERSEY
-            </Link>
-          </div>
-
-          <div className="hero-stats" data-stagger>
-            <div className="stat">
-              <span className="stat-number">10k+</span>
-              <span className="stat-label">Happy Customers</span>
+            <div className="hero-cta">
+              <Link to="/collections" className="btn-primary hero-btn-primary">
+                SHOP COLLECTION
+              </Link>
+              <Link to="/custom" className="btn-secondary hero-btn-secondary">
+                CUSTOM JERSEY
+              </Link>
             </div>
-            <div className="stat-divider" />
-            <div className="stat">
-              <span className="stat-number">Premium</span>
-              <span className="stat-label">Siam Version Fit</span>
-            </div>
-            <div className="stat-divider" />
-            <div className="stat">
-              <span className="stat-number">Pan-India</span>
-              <span className="stat-label">Fast Delivery</span>
+
+            <div className="hero-stats">
+              <div className="stat">
+                <span className="stat-number">10k+</span>
+                <span className="stat-label">Happy Customers</span>
+              </div>
+              <div className="stat-divider" />
+              <div className="stat">
+                <span className="stat-number">Premium</span>
+                <span className="stat-label">Siam Version Fit</span>
+              </div>
+              <div className="stat-divider" />
+              <div className="stat">
+                <span className="stat-number">Pan-India</span>
+                <span className="stat-label">Fast Delivery</span>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Image side */}
-        <div className="hero-image">
-          <div className="hero-image-wrapper" ref={imgRef}>
-            {/* Glowing ring behind the image */}
-            <div className="hero-img-glow" />
-            <img
-              src="/images/real_madrid.png"
-              alt="Premium Soccer Jersey Model"
-              className="hero-img"
+      {/* Slider Controls */}
+      <div className="hero-controls">
+        <div className="hero-dots">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`hero-dot ${index === currentSlide ? 'active' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
             />
-            <div className="hero-image-badge">
-              <span>Siam High-Grade Replica</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
