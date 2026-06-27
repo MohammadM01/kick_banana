@@ -157,7 +157,11 @@ p {
   color: var(--primary-light);
 }
 @media (max-width: 600px) {
-  .section-header h2 { font-size: 2rem; }
+  .section-header h2 { 
+    font-size: 1.85rem; 
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
 }
 
 /* ── Featured Products ───────────────────────── */
