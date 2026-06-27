@@ -7,6 +7,7 @@ import AppRoutes from './routes';
 import Chatbot from './components/Chatbot/Chatbot';
 import WhatsAppButton from './components/Common/WhatsAppButton';
 import PageTransition from './components/Common/PageTransition';
+import ScrollToTop from './components/Common/ScrollToTop';
 import './styles/global.css';
 import './styles/themes.css';
 import './styles/animations.css';
@@ -43,6 +44,7 @@ function App() {
 
       {/* ─── Main App ─── */}
       <Router>
+        <ScrollToTop />
         <div className="app">
           <Header />
           <main>

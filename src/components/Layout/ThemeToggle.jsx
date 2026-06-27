@@ -17,12 +17,13 @@ const ThemeToggle = () => {
     <button
       className={`theme-toggle ${isRotating ? 'rotate' : ''}`}
       onClick={handleToggle}
-      aria-label="Toggle theme"
+      aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       {darkMode ? (
-        <FaSun className="toggle-icon text-yellow" size={20} />
+        <FaSun className="toggle-icon-sun" size={18} />
       ) : (
-        <FaMoon className="toggle-icon text-slate" size={20} />
+        <FaMoon className="toggle-icon-moon" size={18} />
       )}
     </button>
   );

@@ -1,33 +1,129 @@
 .page-transition {
-  will-change: transform, opacity;
-  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity, filter;
 }
 
-.page-transition--idle {
-  transform: translateY(0);
+/* ────────────────────────────────────────────────────────
+   1. HOME: Scale & Fade (Cinematic Zoom)
+──────────────────────────────────────────────────────── */
+.page-transition-type-home {
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.32s ease;
+}
+.page-transition-type-home.page-transition--idle {
+  transform: scale(1);
   opacity: 1;
 }
-
-.page-transition--exit {
-  transform: translateY(12px);
+.page-transition-type-home.page-transition--exit {
+  transform: scale(0.95);
   opacity: 0;
   pointer-events: none;
 }
-
-.page-transition--enter {
-  transform: translateY(-12px);
+.page-transition-type-home.page-transition--enter {
   opacity: 0;
-  animation: pageEnter 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: enterHome 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes enterHome {
+  from { transform: scale(1.05); opacity: 0; filter: blur(4px); }
+  to { transform: scale(1); opacity: 1; filter: blur(0); }
 }
 
-@keyframes pageEnter {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+
+/* ────────────────────────────────────────────────────────
+   2. COLLECTIONS: Slide Up with Perspective
+──────────────────────────────────────────────────────── */
+.page-transition-type-collections {
+  perspective: 1000px;
+}
+.page-transition-type-collections.page-transition--idle {
+  opacity: 1;
+}
+.page-transition-type-collections.page-transition--exit {
+  opacity: 0;
+  transform: translateY(-20px) rotateX(10deg);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.page-transition-type-collections.page-transition--enter {
+  opacity: 0;
+  animation: enterCollections 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+@keyframes enterCollections {
+  from { transform: translateY(60px) rotateX(-15deg); opacity: 0; }
+  to { transform: translateY(0) rotateX(0); opacity: 1; }
+}
+
+
+/* ────────────────────────────────────────────────────────
+   3. ABOUT: 3D Flip & Slide
+──────────────────────────────────────────────────────── */
+.page-transition-type-about {
+  perspective: 1200px;
+}
+.page-transition-type-about.page-transition--idle {
+  opacity: 1;
+}
+.page-transition-type-about.page-transition--exit {
+  opacity: 0;
+  transform: translateX(-40px) rotateY(-15deg);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.page-transition-type-about.page-transition--enter {
+  opacity: 0;
+  transform-origin: center right;
+  animation: enterAbout 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+@keyframes enterAbout {
+  from { transform: translateX(80px) rotateY(20deg); opacity: 0; }
+  to { transform: translateX(0) rotateY(0deg); opacity: 1; }
+}
+
+
+/* ────────────────────────────────────────────────────────
+   4. CUSTOM: Drop down from top
+──────────────────────────────────────────────────────── */
+.page-transition-type-custom.page-transition--idle {
+  opacity: 1;
+}
+.page-transition-type-custom.page-transition--exit {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.page-transition-type-custom.page-transition--enter {
+  opacity: 0;
+  animation: enterCustom 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+@keyframes enterCustom {
+  from { transform: translateY(-80px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+/* ────────────────────────────────────────────────────────
+   5. CONTACT & DEFAULT: Slide & Fade (Standard)
+──────────────────────────────────────────────────────── */
+.page-transition-type-contact,
+.page-transition-type-default {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.page-transition-type-contact.page-transition--idle,
+.page-transition-type-default.page-transition--idle {
+  transform: translateY(0);
+  opacity: 1;
+}
+.page-transition-type-contact.page-transition--exit,
+.page-transition-type-default.page-transition--exit {
+  transform: translateY(15px);
+  opacity: 0;
+  pointer-events: none;
+}
+.page-transition-type-contact.page-transition--enter,
+.page-transition-type-default.page-transition--enter {
+  opacity: 0;
+  animation: enterDefault 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes enterDefault {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }

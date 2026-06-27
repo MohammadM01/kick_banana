@@ -2,34 +2,52 @@
   background: var(--bg-secondary);
   border: 1.5px solid var(--border);
   border-radius: 50%;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow);
+  flex-shrink: 0;
+}
+
+/* Ensure it's always visible — high-contrast border in dark mode */
+[data-theme="dark"] .theme-toggle {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .theme-toggle:hover {
-  border-color: var(--primary);
-  transform: scale(1.08);
-  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-light);
+  background: rgba(210, 154, 56, 0.12);
+  transform: scale(1.1);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background: rgba(210, 154, 56, 0.18);
+  border-color: #D29A38;
 }
 
 .theme-toggle.rotate {
   animation: rotateIcon 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.toggle-icon {
-  transition: color 0.3s ease;
+@keyframes rotateIcon {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
-.toggle-icon.text-yellow {
-  color: var(--accent);
+/* Sun icon — always visible gold in dark mode */
+.toggle-icon-sun {
+  color: #F2C36D;
 }
 
-.toggle-icon.text-slate {
+/* Moon icon — always visible in light mode */
+.toggle-icon-moon {
   color: var(--primary);
+}
+
+[data-theme="dark"] .toggle-icon-moon {
+  color: #94A3B8;
 }
