@@ -26,6 +26,22 @@ const slides = [
     title: 'STREET x',
     highlight: 'PITCH',
     subtitle: 'Style that transcends the game.',
+  },
+  {
+    id: 4,
+    image: '/images/hero_slide_4.png',
+    badge: '🏆 CHAMPIONS',
+    title: 'GLORY',
+    highlight: 'AWAITS',
+    subtitle: 'Vibrant colors, elite performance.',
+  },
+  {
+    id: 5,
+    image: '/images/hero_slide_5.png',
+    badge: '⚫ STEALTH',
+    title: 'DARK',
+    highlight: 'MODE',
+    subtitle: 'Dominate the shadows.',
   }
 ];
 
@@ -120,14 +136,6 @@ const Hero = () => {
             />
           ))}
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="hero-scroll-indicator">
-        <div className="scroll-mouse">
-          <div className="scroll-dot" />
-        </div>
-        <span>SCROLL</span>
       </div>
     </section>
   );

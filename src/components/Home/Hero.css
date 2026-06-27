@@ -266,52 +266,7 @@
   transform: scale(1.3);
 }
 
-/* ── Scroll Indicator ─────────────────────────────── */
-.hero-scroll-indicator {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  opacity: 0.6;
-  animation: scrollIndicatorBob 2s ease-in-out infinite;
-  z-index: 20;
-}
-.hero-scroll-indicator span {
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: var(--text-muted);
-}
-.scroll-mouse {
-  width: 20px;
-  height: 32px;
-  border: 2px solid var(--text-muted);
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  padding-top: 5px;
-}
-.scroll-dot {
-  width: 3px;
-  height: 6px;
-  background: var(--primary-light);
-  border-radius: 3px;
-  animation: scrollDotDrop 2s ease-in-out infinite;
-}
 
-@keyframes scrollDotDrop {
-  0%   { transform: translateY(0); opacity: 1; }
-  70%  { transform: translateY(10px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 0; }
-}
-@keyframes scrollIndicatorBob {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%      { transform: translateX(-50%) translateY(5px); }
-}
 
 
 /* ── Responsive ───────────────────────────────────── */
@@ -367,9 +322,7 @@
     transform: translateX(50%);
   }
   
-  .hero-scroll-indicator {
-    display: none; /* Hide on mobile to save space */
-  }
+
 }
 
 @media (max-width: 480px) {
