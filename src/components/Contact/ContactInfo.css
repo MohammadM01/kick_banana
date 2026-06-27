@@ -1,0 +1,120 @@
+.contact-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-grid-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.contact-info-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+  border-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.contact-icon-wrapper {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border);
+  color: var(--primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact-info-card:hover .contact-icon-wrapper {
+  color: var(--accent);
+}
+
+.contact-text-wrapper h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.contact-link-tag {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.contact-link-tag:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.contact-static-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 550;
+}
+
+.contact-whatsapp-banner {
+  background-color: var(--bg-secondary);
+  border: 1.5px dashed var(--primary-light);
+  border-radius: 24px;
+  padding: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  box-shadow: var(--shadow);
+}
+
+.wa-banner-icon {
+  color: var(--primary);
+}
+
+.wa-banner-text {
+  flex: 1;
+}
+
+.wa-banner-text h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.wa-banner-text p {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .contact-whatsapp-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-grid-info {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

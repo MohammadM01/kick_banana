@@ -1,0 +1,26 @@
+.product-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.no-products-container {
+  text-align: center;
+  padding: 60px 0;
+  background-color: var(--bg-secondary);
+  border: 1.5px dashed var(--border);
+  border-radius: 20px;
+}
+
+.no-products-message {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 576px) {
+  .product-grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,35 @@
+.theme-toggle {
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  transform: scale(1.08);
+  box-shadow: var(--shadow-hover);
+}
+
+.theme-toggle.rotate {
+  animation: rotateIcon 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-icon {
+  transition: color 0.3s ease;
+}
+
+.toggle-icon.text-yellow {
+  color: var(--accent);
+}
+
+.toggle-icon.text-slate {
+  color: var(--primary);
+}

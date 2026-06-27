@@ -1,0 +1,33 @@
+{
+  "intents": [
+    {
+      "keywords": ["hello", "hi", "hey", "greetings", "anyone there"],
+      "response": "Hello! Welcome to **KICKINBANANA** ⚽🏏. How can I help you choose or customize your sports jersey today?"
+    },
+    {
+      "keywords": ["price", "cost", "how much", "prices", "rates"],
+      "response": "Our premium jerseys generally start at **₹1,299** for cricket jerseys and **₹1,499** for football jerseys. Custom orders with custom name/number printing start at **₹1,699**!"
+    },
+    {
+      "keywords": ["custom", "jersey builder", "customize", "custom name", "print name"],
+      "response": "You can design your own jersey directly on our **Custom** page! Choose your colors, pattern, name, and number, then click the order button to send us the design directly on WhatsApp!"
+    },
+    {
+      "keywords": ["shipping", "delivery", "shipping time", "express", "days"],
+      "response": "We offer Pan-India delivery within **5-7 business days**. Express shipping is also available if you need it within 2-3 days for an upcoming match!"
+    },
+    {
+      "keywords": ["contact", "instagram", "phone", "whatsapp", "email", "address"],
+      "response": "You can connect with us via Instagram [@kickinbanana_11](https://instagram.com/kickinbanana_11), drop us a message on WhatsApp at [+91 98765 43210](https://wa.me/919876543210), or email us at kickinbanana@gmail.com."
+    },
+    {
+      "keywords": ["size", "sizes", "sizing chart", "fit", "small", "medium", "large"],
+      "response": "We support standard sizes: **S (38\")**, **M (40\")**, **L (42\")**, **XL (44\")**, and **XXL (46\")**. If you're in between sizes, we recommend sizing up for a relaxed fit."
+    },
+    {
+      "keywords": ["quality", "fabric", "material", "polyester"],
+      "response": "All KICKINBANANA jerseys are crafted from premium **100% dry-fit polyester**, engineered to keep you dry and comfortable during intense match sessions."
+    }
+  ],
+  "fallback": "I'm not fully sure about that, but our team can help! You can check our Collections page, customize a jersey on the Custom page, or message us directly on WhatsApp for instant assistance."
+}

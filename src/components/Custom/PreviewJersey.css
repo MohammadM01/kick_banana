@@ -1,0 +1,44 @@
+.preview-jersey-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: var(--shadow-hover);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-height: 380px;
+  justify-content: center;
+}
+
+.jersey-canvas {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-jersey-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.15));
+}
+
+.jersey-canvas-details {
+  text-align: center;
+}
+
+.live-preview-badge {
+  background-color: var(--bg-primary);
+  color: var(--primary);
+  border: 1.5px solid var(--border);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
