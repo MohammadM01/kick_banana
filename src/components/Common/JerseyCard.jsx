@@ -1,5 +1,5 @@
 import React from 'react';
-import { Send } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import './JerseyCard.css';
 
 const JerseyCard = ({ product }) => {
@@ -7,49 +7,41 @@ const JerseyCard = ({ product }) => {
 
   return (
     <div className="jersey-card">
-      <div className="jersey-image-container">
-        {/* Custom Hand-Drawn / SVG Vector Jersey representation */}
+      <div className="jersey-card-image">
         {product.image ? (
-          <img src={product.image} alt={product.name} className="jersey-product-image" />
+          <img src={product.image} alt={product.name} loading="lazy" />
         ) : (
-          <div className="jersey-vector-placeholder" style={{ '--jersey-color': product.color }}>
-            <svg className="jersey-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 30 L35 15 L45 22 L55 22 L65 15 L80 30 L72 40 L68 36 L68 85 L32 85 L32 36 L28 40 Z" fill="var(--jersey-color)" stroke="var(--primary)" strokeWidth="3" strokeLinejoin="round"/>
-              <path d="M28 40 L32 36" stroke="var(--primary)" strokeWidth="2"/>
-              <path d="M72 40 L68 36" stroke="var(--primary)" strokeWidth="2"/>
-              <path d="M45 22 C45 26, 55 26, 55 22" fill="none" stroke="var(--primary)" strokeWidth="3" strokeLinecap="round"/>
-              {product.sport === 'football' ? (
-                <circle cx="50" cy="45" r="8" fill="#FFF" stroke="var(--primary)" strokeWidth="1.5"/>
-              ) : (
-                <path d="M46 41 L54 49 M54 41 L46 49" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round"/>
-              )}
-            </svg>
-            <span className="jersey-sport-label">{product.sport.toUpperCase()}</span>
+          <div className="image-placeholder">
+            <span>👕</span>
           </div>
         )}
         {product.badge && (
-          <span className={`jersey-badge-pill ${product.badge.toLowerCase()}`}>
+          <span className={`badge ${product.badge.toLowerCase()}`}>
             {product.badge}
           </span>
         )}
       </div>
-      <div className="jersey-info">
+
+      <div className="jersey-card-body">
+        <span className="jersey-sport">{product.sport}</span>
         <h3>{product.name}</h3>
-        <p className="jersey-desc">{product.description}</p>
+        <p className="jersey-description">{product.description}</p>
+
         <div className="jersey-sizes">
           {product.sizes.map(size => (
-            <span key={size} className="size-pill">{size}</span>
+            <span key={size} className="size-tag">{size}</span>
           ))}
         </div>
-        <div className="jersey-footer">
+
+        <div className="jersey-card-footer">
           <span className="jersey-price">{product.price}</span>
           <a
             href={`https://wa.me/919876543210?text=${encodeURIComponent(whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="enquire-now-btn"
+            className="enquire-btn"
           >
-            <Send size={14} />
+            <FaWhatsapp size={14} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
             <span>Enquire</span>
           </a>
         </div>

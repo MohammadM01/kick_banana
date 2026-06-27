@@ -1,33 +1,54 @@
 {
-  "intents": [
+  "greeting": "👋 Welcome to KICKINBANANA! I am BananaBot, your expert jersey companion. Ask me any question about pricing, sizing, custom orders, delivery, or quality, or click one of the quick suggestions below!",
+  "fallback": "I want to make sure you get the absolute best replica kit fit. Let me connect you directly with our team on WhatsApp for this custom request!",
+  "responses": [
     {
-      "keywords": ["hello", "hi", "hey", "greetings", "anyone there"],
-      "response": "Hello! Welcome to **KICKINBANANA** ⚽🏏. How can I help you choose or customize your sports jersey today?"
+      "keywords": ["price", "cost", "rate", "how much", "charges"],
+      "response": "Our premium replica kits start from ₹1,299 up to ₹1,499. Custom player name and number printing adds just ₹100 extra! Bulk team orders of 10+ kits qualify for flat 15% discount packages."
     },
     {
-      "keywords": ["price", "cost", "how much", "prices", "rates"],
-      "response": "Our premium jerseys generally start at **₹1,299** for cricket jerseys and **₹1,499** for football jerseys. Custom orders with custom name/number printing start at **₹1,699**!"
+      "keywords": ["size", "fit", "measurement", "xxl", "xl", "medium", "small"],
+      "response": "We support standard S, M, L, XL, and XXL sizes. Our football jerseys feature professional slim athletic fit (Siam High-Grade replica versions). If you prefer a relaxed fit, we highly recommend selecting one size larger than your casual shirt."
     },
     {
-      "keywords": ["custom", "jersey builder", "customize", "custom name", "print name"],
-      "response": "You can design your own jersey directly on our **Custom** page! Choose your colors, pattern, name, and number, then click the order button to send us the design directly on WhatsApp!"
+      "keywords": ["custom", "personalize", "name", "number", "my name", "print"],
+      "response": "Absolutely! We do official-style heat transfer vinyl printing for any custom Name (up to 15 characters) and Number (0-99). You can specify these parameters in our Custom Jersey Form section or share them directly on WhatsApp!"
     },
     {
-      "keywords": ["shipping", "delivery", "shipping time", "express", "days"],
-      "response": "We offer Pan-India delivery within **5-7 business days**. Express shipping is also available if you need it within 2-3 days for an upcoming match!"
+      "keywords": ["delivery", "shipping", "arrive", "dispatch", "days", "time"],
+      "response": "We dispatch orders within 48 hours. Standard tracked shipping across India takes 5-7 business days and is completely free! Express air shipping (2-3 days delivery) is available on request."
     },
     {
-      "keywords": ["contact", "instagram", "phone", "whatsapp", "email", "address"],
-      "response": "You can connect with us via Instagram [@kickinbanana_11](https://instagram.com/kickinbanana_11), drop us a message on WhatsApp at [+91 98765 43210](https://wa.me/919876543210), or email us at kickinbanana@gmail.com."
+      "keywords": ["return", "refund", "exchange", "replace"],
+      "response": "We offer hassle-free size exchanges within 7 days of delivery for unused jerseys with original tags intact. Please note custom printed jerseys with personal names/numbers cannot be exchanged unless there is a print defect."
     },
     {
-      "keywords": ["size", "sizes", "sizing chart", "fit", "small", "medium", "large"],
-      "response": "We support standard sizes: **S (38\")**, **M (40\")**, **L (42\")**, **XL (44\")**, and **XXL (46\")**. If you're in between sizes, we recommend sizing up for a relaxed fit."
+      "keywords": ["cricket", "india", "t20", "ipl", "rcb", "csk", "mi"],
+      "response": "We have the India T20 World Cup edition, ODI blue kits, and major IPL team replica jerseys. All feature sweat-wicking dry-fit mesh fabrics."
     },
     {
-      "keywords": ["quality", "fabric", "material", "polyester"],
-      "response": "All KICKINBANANA jerseys are crafted from premium **100% dry-fit polyester**, engineered to keep you dry and comfortable during intense match sessions."
+      "keywords": ["football", "soccer", "argentina", "brazil", "real madrid", "inter", "arsenal", "milan", "city"],
+      "response": "Our catalog features premium replica club kits including Real Madrid Home, Inter Milan Home, Arsenal Away, Argentina 3-Star, and Brazil Triumphant Home. All badges are detailed embroidery."
+    },
+    {
+      "keywords": ["bulk", "team", "wholesale", "group", "10", "discount"],
+      "response": "Yes, we support full team kits! Orders of 10+ items receive 15% off, and 25+ items receive 20% off plus free customized printing. Connect with us on WhatsApp to get a formal quote!"
+    },
+    {
+      "keywords": ["payment", "pay", "upi", "cod", "card", "gpay"],
+      "response": "We accept all secure UPI options (Google Pay, PhonePe, Paytm), NetBanking, and credit/debit cards. Cash on Delivery (COD) is available with a nominal advance fee to verify shipping address."
+    },
+    {
+      "keywords": ["material", "fabric", "quality", "siam", "replica", "dryfit"],
+      "response": "Our replica kits are Siam High-Grade quality, made from 100% premium double-knit dry-fit polyester mesh. They are breathable, lightweight, and identical in weave and feel to official fan jerseys."
+    },
+    {
+      "keywords": ["track", "status", "shipment"],
+      "response": "Once dispatched, a tracking link from Delhivery/BlueDart is sent to your phone. You can also send us a WhatsApp message with your order details for instant updates."
+    },
+    {
+      "keywords": ["instagram", "insta", "handle", "page"],
+      "response": "Follow us on Instagram @kickinbanana_11 to browse customer unboxing videos, size reviews, and live catalog drops!"
     }
-  ],
-  "fallback": "I'm not fully sure about that, but our team can help! You can check our Collections page, customize a jersey on the Custom page, or message us directly on WhatsApp for instant assistance."
+  ]
 }

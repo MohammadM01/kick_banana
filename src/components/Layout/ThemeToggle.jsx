@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme } from '../../context/ThemeContext';
-import { Sun, Moon } from 'lucide-react';
+import { FaSun, FaMoon } from 'react-icons/fa';
 import './ThemeToggle.css';
 
 const ThemeToggle = () => {
@@ -20,9 +20,9 @@ const ThemeToggle = () => {
       aria-label="Toggle theme"
     >
       {darkMode ? (
-        <Sun className="toggle-icon text-yellow" size={20} />
+        <FaSun className="toggle-icon text-yellow" size={20} />
       ) : (
-        <Moon className="toggle-icon text-slate" size={20} />
+        <FaMoon className="toggle-icon text-slate" size={20} />
       )}
     </button>
   );

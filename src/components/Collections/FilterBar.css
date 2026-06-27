@@ -15,7 +15,8 @@
 
 .search-wrapper {
   flex: 1;
-  min-width: 280px;
+  min-width: 0;
+  width: 100%;
 }
 
 .search-input {

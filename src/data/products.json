@@ -1,7 +1,62 @@
 [
   {
     "id": 1,
-    "name": "Inter Milan 2025/26 Home",
+    "name": "Argentina Triumphant Home Jersey",
+    "sport": "football",
+    "price": "₹1,499",
+    "sizes": ["S", "M", "L", "XL"],
+    "badge": "Bestseller",
+    "description": "Premium cyan blue and white striped Argentina home national kit featuring three championship stars.",
+    "color": "#75AADB",
+    "image": "/images/argentina.png"
+  },
+  {
+    "id": 2,
+    "name": "Real Madrid 2025/26 Home Kit",
+    "sport": "football",
+    "price": "₹1,499",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "badge": "Popular",
+    "description": "Classic clean white Real Madrid Home Jersey, engineered for premium performance.",
+    "color": "#FFFFFF",
+    "image": "/images/real_madrid.png"
+  },
+  {
+    "id": 3,
+    "name": "India Cricket T20 World Cup Edition",
+    "sport": "cricket",
+    "price": "₹1,299",
+    "sizes": ["M", "L", "XL"],
+    "badge": "New",
+    "description": "Official style India T20 jersey with premium orange and royal blue shoulder panels.",
+    "color": "#0F52BA",
+    "image": "/images/india_cricket.png"
+  },
+  {
+    "id": 4,
+    "name": "Arsenal 2025/26 Away Jersey",
+    "sport": "football",
+    "price": "₹1,399",
+    "sizes": ["S", "M", "L", "XL"],
+    "badge": null,
+    "description": "Stunning dark black and red accented replica away jersey for Arsenal fans.",
+    "color": "#111111",
+    "image": "/images/arsenal_away.png"
+  },
+  {
+    "id": 5,
+    "name": "Canarinho Brazil Triumphant Home",
+    "sport": "football",
+    "price": "₹1,399",
+    "sizes": ["S", "M", "L", "XL"],
+    "badge": "Popular",
+    "description": "Classic bright yellow body with green trim, the iconic replica jersey of the Brazil national squad.",
+    "color": "#FFDF00",
+    "image": "/images/brazil.png"
+  },
+  {
+    "id": 6,
+    "name": "Inter Milan 2025/26 Home Kit",
     "sport": "football",
     "price": "₹1,499",
     "sizes": ["S", "M", "L", "XL"],
@@ -11,80 +66,14 @@
     "image": "/images/inter_milan.png"
   },
   {
-    "id": 2,
-    "name": "Real Madrid 2025/26 Home",
-    "sport": "football",
-    "price": "₹1,499",
-    "sizes": ["S", "M", "L", "XL", "XXL"],
-    "badge": "Popular",
-    "description": "Classic white Real Madrid Home Jersey, engineered for premium performance.",
-    "color": "#FFFFFF",
-    "image": "/images/real_madrid.png"
-  },
-  {
-    "id": 3,
-    "name": "India Cricket T20 World Cup Jersey",
-    "sport": "cricket",
-    "price": "₹1,299",
-    "sizes": ["M", "L", "XL"],
-    "badge": "New",
-    "description": "Official style India T20 jersey with premium tri-color collar and shoulder highlights.",
-    "color": "#1C3D5A",
-    "image": "/images/india_cricket.png"
-  },
-  {
-    "id": 4,
-    "name": "Arsenal 2025/26 Away",
-    "sport": "football",
-    "price": "₹1,399",
-    "sizes": ["S", "M", "L", "XL"],
-    "badge": null,
-    "description": "Stunning clean black and red accented away jersey for Arsenal fans.",
-    "color": "#111111",
-    "image": "/images/arsenal_away.png"
-  },
-  {
-    "id": 5,
-    "name": "Australia Ashes Test Jersey",
-    "sport": "cricket",
-    "price": "₹1,199",
-    "sizes": ["S", "M", "L", "XL"],
-    "badge": "Classic",
-    "description": "Traditional cream white Australian Test jersey with embossed crest.",
-    "color": "#F3EFE0",
-    "image": "/images/india_cricket.png"
-  },
-  {
-    "id": 6,
-    "name": "Manchester City 2025/26 Home",
-    "sport": "football",
-    "price": "₹1,499",
-    "sizes": ["S", "M", "L", "XL", "XXL"],
-    "badge": "Bestseller",
-    "description": "Iconic sky blue Manchester City jersey with modern collar designs.",
-    "color": "#6CABDD",
-    "image": "/images/inter_milan.png"
-  },
-  {
     "id": 7,
-    "name": "England ODI Cricket Jersey",
-    "sport": "cricket",
-    "price": "₹1,299",
-    "sizes": ["M", "L", "XL"],
-    "badge": null,
-    "description": "Vibrant blue and red gradient ODI jersey featuring high-breathability mesh fabric.",
-    "color": "#19395B",
-    "image": "/images/india_cricket.png"
-  },
-  {
-    "id": 8,
-    "name": "FC Barcelona 2025/26 Home",
+    "name": "Deutschland Germany Home Kit",
     "sport": "football",
     "price": "₹1,499",
     "sizes": ["S", "M", "L", "XL"],
     "badge": "New",
-    "description": "Traditional Blaugrana vertical stripes with gold accents.",
-    "color": "#A50044",
-    "image": "/images/inter_milan.png"
+    "description": "Classic white body with black and red gradient shoulder stripes representing German precision.",
+    "color": "#FFFFFF",
+    "image": "/images/germany.png"
   }
 ]

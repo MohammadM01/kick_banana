@@ -1,45 +1,46 @@
 :root {
-  /* Light Theme */
-  --bg-primary: #F8F9FA;
+  /* Light Theme - Clean Off-White with Logo's Deep Gold & Royal Blue Highlights */
+  --bg-primary: #F3F4F6;
   --bg-secondary: #FFFFFF;
   --bg-card: #FFFFFF;
-  --bg-input: #F1F3F5;
-  --text-primary: #1A1A1A;
-  --text-secondary: #4A4A4A;
-  --text-muted: #8A8A8A;
-  --primary: #3B4E63;       /* Smoky Blue */
-  --primary-dark: #273443;
-  --primary-light: #526C88;
-  --primary-rgb: 59, 78, 99;
-  --border: #E5E7EB;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.12);
-  --radius: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --success: #2E7D32;
-  --warning: #ED6C02;
+  --bg-input: #F9FAFB;
+  --text-primary: #0A1128;   /* Deep Navy Black */
+  --text-secondary: #1E293B;
+  --text-muted: #64748B;
+  --primary: #0F2D59;       /* Shield Royal Blue */
+  --primary-dark: #071C3D;
+  --primary-light: #D29A38;   /* Banner Gold Accent Highlight */
+  --primary-rgb: 15, 45, 89;
+  --border: #E2E8F0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+  --success: #10B981;
+  --warning: #F59E0B;
 }
 
 [data-theme="dark"] {
-  --bg-primary: #1A1E21;
-  --bg-secondary: #242A2E;
-  --bg-card: #2C3539;
-  --bg-input: #3E4A56;
-  --text-primary: #F0F2F5;
-  --text-secondary: #C5CCD4;
-  --text-muted: #8A98A5;
-  --primary: #747F94;
-  --primary-dark: #8FA0B5;
-  --primary-light: #5A6679;
-  --primary-rgb: 116, 127, 148;
-  --border: #3E4A56;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
-  --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.6);
+  /* Premium Dark Theme - Logo Shield colors */
+  --bg-primary: #0A0D14;     /* Deep Obsidian Shield Dark Blue */
+  --bg-secondary: #101622;   /* Card Background */
+  --bg-card: #101622;
+  --bg-input: #1B2332;
+  --text-primary: #F9FAFB;
+  --text-secondary: #D1D5DB;
+  --text-muted: #8492A6;
+  --primary: #D29A38;        /* Shield Banner Gold Highlight */
+  --primary-dark: #B57F26;
+  --primary-light: #F2C36D;
+  --primary-rgb: 210, 154, 56;
+  --border: #1F293D;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
 }
 
 body {

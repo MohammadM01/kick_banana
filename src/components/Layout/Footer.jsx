@@ -1,52 +1,69 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Send, MessageSquare } from 'lucide-react';
+import { FaWhatsapp, FaInstagram, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
+  const wsUrl = "https://wa.me/919373874400?text=Hi%20KICKINBANANA!%20I%20saw%20your%20website%20and%20want%20to%20place%20an%20order.";
+  const callUrl = "tel:+919373874400";
+  const instaUrl = "https://instagram.com/kickinbanana_11";
+  const mailUrl = "mailto:kickinbanana@gmail.com";
+
   return (
     <footer className="footer">
-      <div className="container footer-content">
-        <div className="footer-brand">
-          <Link to="/" className="footer-logo">
-            <div className="logo-badge">KB</div>
-            <h3>KICKINBANANA</h3>
-          </Link>
-          <p className="footer-desc">
-            Premium custom soccer & cricket jerseys designed for performance and built for durability. Handcrafted fits for the absolute enthusiasts.
-          </p>
-          <div className="footer-tagline">
-            High Quality • Great Fit • Affordable
+      <div className="container">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <div className="footer-logo-row">
+              <img src="/images/logo.png" alt="KICKINBANANA Logo" className="footer-logo-img" />
+              <h3>KICKIN<span>BANANA</span></h3>
+            </div>
+            <p className="footer-desc">Premium dry-fit replica soccer & cricket kits. Customized name & number vinyl prints tailored to match professional pitch-wear standards.</p>
+            <div className="footer-contact-details">
+              <a href={wsUrl} target="_blank" rel="noopener noreferrer" className="contact-item">
+                <FaWhatsapp className="contact-icon ws-green" /> +91 9373874400
+              </a>
+              <a href={callUrl} className="contact-item">
+                <FaPhoneAlt className="contact-icon gold" /> Call: +91 9373874400
+              </a>
+            </div>
+          </div>
+
+          <div className="footer-links">
+            <h4>SHOP DIRECTORY</h4>
+            <Link to="/">Home</Link>
+            <Link to="/collections">Replica Jerseys</Link>
+            <Link to="/custom">Customization Form</Link>
+            <Link to="/about">Brand Story</Link>
+          </div>
+
+          <div className="footer-links">
+            <h4>SUPPORT & HELP</h4>
+            <a href={wsUrl} target="_blank" rel="noopener noreferrer">WhatsApp Support</a>
+            <a href={mailUrl}>Email Support</a>
+            <span className="reply-time">Instant response within 1 hour</span>
+          </div>
+
+          <div className="footer-social">
+            <h4>CONNECT WITH US</h4>
+            <p className="social-sub">Follow our Instagram catalog for daily updates & product reviews.</p>
+            <div className="social-icons">
+              <a href={instaUrl} target="_blank" rel="noopener noreferrer" className="social-icon instagram" aria-label="Instagram">
+                <FaInstagram />
+              </a>
+              <a href={wsUrl} target="_blank" rel="noopener noreferrer" className="social-icon whatsapp" aria-label="WhatsApp">
+                <FaWhatsapp />
+              </a>
+              <a href={mailUrl} className="social-icon email" aria-label="Email">
+                <FaEnvelope />
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="footer-links">
-          <h4>Explore</h4>
-          <Link to="/">Home</Link>
-          <Link to="/collections">Collections</Link>
-          <Link to="/custom">Custom Orders</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/contact">Contact Support</Link>
+        <div className="footer-bottom">
+          <p>© {new Date().getFullYear()} KICKINBANANA. Premium Replica Apparel Co. All rights reserved.</p>
         </div>
-
-        <div className="footer-social">
-          <h4>Get in Touch</h4>
-          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="social-link">
-            <MessageSquare size={18} />
-            <span>WhatsApp Order Support</span>
-          </a>
-          <a href="https://instagram.com/kickinbanana_11" target="_blank" rel="noopener noreferrer" className="social-link">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            <span>@kickinbanana_11</span>
-          </a>
-          <a href="mailto:kickinbanana@gmail.com" className="social-link">
-            <Send size={18} />
-            <span>kickinbanana@gmail.com</span>
-          </a>
-        </div>
-      </div>
-      <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} KICKINBANANA. All rights reserved.</p>
       </div>
     </footer>
   );

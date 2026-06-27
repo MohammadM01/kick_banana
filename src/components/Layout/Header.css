@@ -6,196 +6,192 @@
   z-index: 1000;
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border);
-  transition: all 0.4s ease;
-  padding: 20px 0;
+  transition: all 0.3s ease;
+  padding: 14px 0;
 }
 
 .header.scrolled {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom-color: var(--border);
-  box-shadow: var(--shadow-sm);
-  padding: 12px 0;
-}
-
-[data-theme="dark"] .header {
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 10px 0;
 }
 
 [data-theme="dark"] .header.scrolled {
-  background: rgba(26, 30, 33, 0.92);
+  background: rgba(16, 22, 34, 0.9);
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--text-primary);
-  text-decoration: none;
-  letter-spacing: -0.5px;
-}
-
-.logo .highlight {
-  color: var(--primary);
-}
-
-[data-theme="dark"] .logo .highlight {
-  color: var(--primary-dark);
-}
-
-.nav {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-}
-
-.nav-link {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  position: relative;
-  transition: color 0.3s ease;
-  padding: 4px 0;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2.5px;
-  background: var(--primary);
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover {
-  color: var(--text-primary);
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
-}
-
-.nav-link.active {
-  color: var(--primary);
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
   gap: 16px;
 }
 
-.header-whatsapp {
+/* ── Logo ─────────────────────────────────────── */
+.logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-img {
   height: 40px;
-  border-radius: 50%;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+.logo-text .highlight {
+  color: var(--primary-light);
+}
+
+/* ── Desktop Nav ─────────────────────────────── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-light);
+}
+
+.nav-whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: #25D366;
-  color: white;
-  font-size: 1.2rem;
+  color: white !important;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.78rem;
   transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
-.header-whatsapp:hover {
-  transform: scale(1.1);
-  color: white;
+.nav-whatsapp-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 }
 
+/* ── Header Actions ──────────────────────────── */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* ── Mobile Menu Button ──────────────────────── */
 .mobile-menu-btn {
   display: none;
   background: none;
-  border: none;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
   cursor: pointer;
-  padding: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
 }
 
-.hamburger {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--text-primary);
-  position: relative;
-  transition: all 0.3s ease;
+.mobile-menu-btn:hover {
+  background: var(--bg-primary);
 }
 
-.hamburger::before,
-.hamburger::after {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background: var(--text-primary);
-  transition: all 0.3s ease;
+/* ── Mobile Overlay ──────────────────────────── */
+.mobile-overlay {
+  display: none;
 }
 
-.hamburger::before {
-  top: -6px;
-}
-.hamburger::after {
-  bottom: -6px;
-}
-
-.hamburger.active {
-  background: transparent;
-}
-
-.hamburger.active::before {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-.hamburger.active::after {
-  transform: rotate(-45deg);
-  bottom: 0;
-}
-
-@media (max-width: 768px) {
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 900px) {
   .nav {
-    position: absolute;
-    top: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: var(--bg-secondary);
-    padding: 24px;
-    gap: 16px;
-    border-bottom: 1px solid var(--border);
-    transform: translateY(-120%);
+    gap: 28px;
+    z-index: 999;
     opacity: 0;
-    transition: all 0.4s ease;
-    box-shadow: var(--shadow-md);
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
   }
 
   .nav.open {
-    transform: translateY(0);
+    display: flex;
     opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .nav-whatsapp-link {
+    font-size: 0.9rem;
+    padding: 12px 24px;
   }
 
   .mobile-menu-btn {
+    display: flex;
+    z-index: 1001;
+    position: relative;
+  }
+
+  .mobile-overlay {
     display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
   }
 
-  .logo {
-    font-size: 1.3rem;
+  .logo-img {
+    height: 34px;
   }
 
-  .header-whatsapp {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
+  .logo-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-text {
+    display: none;
   }
 }
