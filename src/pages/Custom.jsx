@@ -14,7 +14,7 @@ const Custom = () => {
     <div className="custom-page container fade-in" style={{ paddingBottom: '80px', paddingTop: '40px' }}>
       <div className="section-header" style={{ marginBottom: '40px' }}>
         <h2>Custom Jersey Builder</h2>
-        <p>Design your dream kit. Choose colors, add your name, and send details directly to our WhatsApp to order.</p>
+        <p>Design your dream jersey. Choose colors, add your name, and send details directly to our WhatsApp to order.</p>
       </div>
 
       <div style={{

@@ -18,7 +18,7 @@ const Footer = () => {
               <img src="/images/logo.png" alt="KICKINBANANA Logo" className="footer-logo-img" />
               <h3>KICKIN<span>BANANA</span></h3>
             </div>
-            <p className="footer-desc">Premium dry-fit replica soccer & cricket kits. Customized name & number vinyl prints tailored to match professional pitch-wear standards.</p>
+            <p className="footer-desc">Premium dry-fit replica soccer &amp; cricket jerseys. Customized name &amp; number vinyl prints tailored to match professional pitch-wear standards.</p>
             <div className="footer-contact-details">
               <a href={wsUrl} target="_blank" rel="noopener noreferrer" className="contact-item">
                 <FaWhatsapp className="contact-icon ws-green" /> +91 9373874400

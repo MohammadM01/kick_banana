@@ -12,7 +12,7 @@ const BrandStory = () => {
           <span className="story-badge">Established 2024</span>
           <h2>Crafted for the Real Fan</h2>
           <p>
-            KICKINBANANA started with a simple belief: football and cricket jerseys shouldn't cost a fortune to be premium. As die-hard sports enthusiasts ourselves, we noticed the market was filled with overpriced, generic kits that lose their shine after a few matches.
+            KICKINBANANA started with a simple belief: football and cricket jerseys shouldn't cost a fortune to be premium. As die-hard sports enthusiasts ourselves, we noticed the market was filled with overpriced, generic jerseys that lose their shine after a few matches.
           </p>
           <p>
             We set out to change the game by working directly with specialized manufacturers, ensuring every thread, patch, and custom vinyl lettering meets standard matchday quality. Today, we supply custom-built soccer jerseys and cricket gear to local clubs, fans, and athletes across India.

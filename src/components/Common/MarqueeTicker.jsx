@@ -2,7 +2,7 @@ import React from 'react';
 import './MarqueeTicker.css';
 
 const items = [
-  '⚽ Football Kits',
+  '⚽ Football Jerseys',
   '🏏 Cricket Jerseys',
   '🌍 Global Club Replicas',
   '⚡ Dry-Fit Technology',

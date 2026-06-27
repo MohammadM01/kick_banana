@@ -6,13 +6,13 @@
     "price": "₹1,499",
     "sizes": ["S", "M", "L", "XL"],
     "badge": "Bestseller",
-    "description": "Premium cyan blue and white striped Argentina home national kit featuring three championship stars.",
+    "description": "Premium cyan blue and white striped Argentina home national jersey featuring three championship stars.",
     "color": "#75AADB",
     "image": "/images/argentina.png"
   },
   {
     "id": 2,
-    "name": "Real Madrid 2025/26 Home Kit",
+    "name": "Real Madrid 2025/26 Home Jersey",
     "sport": "football",
     "price": "₹1,499",
     "sizes": ["S", "M", "L", "XL", "XXL"],
@@ -56,7 +56,7 @@
   },
   {
     "id": 6,
-    "name": "Inter Milan 2025/26 Home Kit",
+    "name": "Inter Milan 2025/26 Home Jersey",
     "sport": "football",
     "price": "₹1,499",
     "sizes": ["S", "M", "L", "XL"],
@@ -67,7 +67,7 @@
   },
   {
     "id": 7,
-    "name": "Deutschland Germany Home Kit",
+    "name": "Deutschland Germany Home Jersey",
     "sport": "football",
     "price": "₹1,499",
     "sizes": ["S", "M", "L", "XL"],

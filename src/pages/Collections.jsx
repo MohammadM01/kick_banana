@@ -18,7 +18,7 @@ const Collections = () => {
     <div className="collections-page container fade-in" style={{ paddingBottom: '80px', paddingTop: '40px' }}>
       <div className="section-header">
         <h2>Jersey Collections</h2>
-        <p>Premium dry-fit replica kits cataloged for both soccer and cricket teams.</p>
+        <p>Premium dry-fit replica jerseys cataloged for both soccer and cricket teams.</p>
       </div>
 
       <FilterBar

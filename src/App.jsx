@@ -32,7 +32,7 @@ function App() {
         <div className="loader-logo-container">
           <img src="/images/logo.png" alt="KICKINBANANA Logo" className="loader-logo" />
           <h2 className="loader-brand">KICKIN<span>BANANA</span></h2>
-          <p className="loader-tagline">Premium Replica Kits</p>
+          <p className="loader-tagline">Premium Jerseys</p>
         </div>
 
         {/* Progress bar */}

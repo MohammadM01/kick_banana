@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ArrowRight, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import JerseyCard from '../Common/JerseyCard';
@@ -6,13 +6,13 @@ import productsData from '../../data/products.json';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './FeaturedProducts.css';
 
-const FeaturedProducts = () => {
-  const [bestsellers, setBestsellers] = useState([]);
-  const sectionRef = useScrollReveal(0.08);
+// Load synchronously — data is local JSON, no async needed
+const bestsellers = productsData
+  .filter(p => p.badge === 'Bestseller' || p.badge === 'New')
+  .slice(0, 4);
 
-  useEffect(() => {
-    setBestsellers(productsData.filter(p => p.badge === 'Bestseller' || p.badge === 'New').slice(0, 4));
-  }, []);
+const FeaturedProducts = () => {
+  const sectionRef = useScrollReveal(0.05);
 
   return (
     <section className="featured-products" ref={sectionRef}>
@@ -31,7 +31,7 @@ const FeaturedProducts = () => {
               key={product.id}
               className="card-reveal-wrapper"
               data-reveal
-              data-reveal-delay={idx * 90}
+              data-reveal-delay={String(idx * 90)}
             >
               <JerseyCard product={product} />
             </div>

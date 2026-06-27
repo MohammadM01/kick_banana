@@ -1,10 +1,10 @@
 {
   "greeting": "👋 Welcome to KICKINBANANA! I am BananaBot, your expert jersey companion. Ask me any question about pricing, sizing, custom orders, delivery, or quality, or click one of the quick suggestions below!",
-  "fallback": "I want to make sure you get the absolute best replica kit fit. Let me connect you directly with our team on WhatsApp for this custom request!",
+  "fallback": "I want to make sure you get the absolute best replica jersey fit. Let me connect you directly with our team on WhatsApp for this custom request!",
   "responses": [
     {
       "keywords": ["price", "cost", "rate", "how much", "charges"],
-      "response": "Our premium replica kits start from ₹1,299 up to ₹1,499. Custom player name and number printing adds just ₹100 extra! Bulk team orders of 10+ kits qualify for flat 15% discount packages."
+      "response": "Our premium replica jerseys start from ₹1,299 up to ₹1,499. Custom player name and number printing adds just ₹100 extra! Bulk team orders of 10+ jerseys qualify for flat 15% discount packages."
     },
     {
       "keywords": ["size", "fit", "measurement", "xxl", "xl", "medium", "small"],
@@ -24,15 +24,15 @@
     },
     {
       "keywords": ["cricket", "india", "t20", "ipl", "rcb", "csk", "mi"],
-      "response": "We have the India T20 World Cup edition, ODI blue kits, and major IPL team replica jerseys. All feature sweat-wicking dry-fit mesh fabrics."
+      "response": "We have the India T20 World Cup edition, ODI blue jerseys, and major IPL team replica jerseys. All feature sweat-wicking dry-fit mesh fabrics."
     },
     {
       "keywords": ["football", "soccer", "argentina", "brazil", "real madrid", "inter", "arsenal", "milan", "city"],
-      "response": "Our catalog features premium replica club kits including Real Madrid Home, Inter Milan Home, Arsenal Away, Argentina 3-Star, and Brazil Triumphant Home. All badges are detailed embroidery."
+      "response": "Our catalog features premium replica jerseys including Real Madrid Home, Inter Milan Home, Arsenal Away, Argentina 3-Star, and Brazil Triumphant Home. All badges are detailed embroidery."
     },
     {
       "keywords": ["bulk", "team", "wholesale", "group", "10", "discount"],
-      "response": "Yes, we support full team kits! Orders of 10+ items receive 15% off, and 25+ items receive 20% off plus free customized printing. Connect with us on WhatsApp to get a formal quote!"
+      "response": "Yes, we support full team orders! Orders of 10+ jerseys receive 15% off, and 25+ jerseys receive 20% off plus free customized printing. Connect with us on WhatsApp to get a formal quote!"
     },
     {
       "keywords": ["payment", "pay", "upi", "cod", "card", "gpay"],
@@ -40,7 +40,7 @@
     },
     {
       "keywords": ["material", "fabric", "quality", "siam", "replica", "dryfit"],
-      "response": "Our replica kits are Siam High-Grade quality, made from 100% premium double-knit dry-fit polyester mesh. They are breathable, lightweight, and identical in weave and feel to official fan jerseys."
+      "response": "Our replica jerseys are Siam High-Grade quality, made from 100% premium double-knit dry-fit polyester mesh. They are breathable, lightweight, and identical in weave and feel to official fan jerseys."
     },
     {
       "keywords": ["track", "status", "shipment"],

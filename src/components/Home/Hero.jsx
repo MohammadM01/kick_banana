@@ -30,7 +30,7 @@ const Hero = () => {
       <div className="container hero-content" ref={textRef}>
         {/* Text side */}
         <div className="hero-text">
-          <span className="hero-badge" data-stagger>⚡ PREMIUM REPLICA KITS</span>
+          <span className="hero-badge" data-stagger>⚡ PREMIUM JERSEYS</span>
 
           <h1 data-stagger>
             KICKIN<br />

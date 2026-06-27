@@ -4,7 +4,7 @@ import './FilterBar.css';
 const FilterBar = ({ activeSport, setActiveSport, searchQuery, setSearchQuery }) => {
   const categories = [
     { id: 'all', label: 'All Jerseys' },
-    { id: 'football', label: 'Football Kits ⚽' },
+    { id: 'football', label: 'Football Jerseys ⚽' },
     { id: 'cricket', label: 'Cricket Jerseys 🏏' },
   ];
 

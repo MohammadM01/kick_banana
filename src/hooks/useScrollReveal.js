@@ -11,7 +11,7 @@ import { useEffect, useRef } from 'react';
  *     <div data-reveal data-reveal-delay="100">...</div>
  *   </section>
  */
-export function useScrollReveal(threshold = 0.12) {
+export function useScrollReveal(threshold = 0.1) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -19,22 +19,38 @@ export function useScrollReveal(threshold = 0.12) {
     if (!container) return;
 
     const targets = container.querySelectorAll('[data-reveal]');
+    if (targets.length === 0) return;
+
+    const reveal = (el) => {
+      const delay = Number(el.dataset.revealDelay || 0);
+      setTimeout(() => el.classList.add('revealed'), delay);
+    };
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          const delay = entry.target.dataset.revealDelay || 0;
-          setTimeout(() => {
-            entry.target.classList.add('revealed');
-          }, Number(delay));
+          reveal(entry.target);
           observer.unobserve(entry.target);
         });
       },
-      { threshold }
+      {
+        threshold,
+        // Trigger slightly before element enters viewport
+        rootMargin: '0px 0px -40px 0px',
+      }
     );
 
-    targets.forEach((el) => observer.observe(el));
+    targets.forEach((el) => {
+      // If already visible in viewport on mount, reveal immediately
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        reveal(el);
+      } else {
+        observer.observe(el);
+      }
+    });
+
     return () => observer.disconnect();
   }, [threshold]);
 
