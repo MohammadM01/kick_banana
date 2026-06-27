@@ -1,7 +1,10 @@
 import React from 'react';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './Testimonials.css';
 
 const Testimonials = () => {
+  const ref = useScrollReveal(0.1);
+
   const reviews = [
     {
       name: "Rohit Sharma",
@@ -12,7 +15,7 @@ const Testimonials = () => {
     {
       name: "Aditya Verma",
       role: "Cricket Club Organizer",
-      comment: "Highly pleased with the customer support. We asked for dynamic tri-color collar customizations and the preview tool matched exactly what we received. Highly recommend!",
+      comment: "Highly pleased with the customer support. We asked for dynamic tri-color collar customizations and the preview matched exactly what we received. Highly recommend!",
       rating: "⭐⭐⭐⭐⭐"
     },
     {
@@ -24,19 +27,24 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="testimonials-section">
-      <div className="section-header">
+    <div className="testimonials-section" ref={ref}>
+      <div className="section-header" data-reveal>
         <h2>Loved By Sports Fans</h2>
         <p>Real feedback from fans, captains, and club leads across the nation.</p>
       </div>
       <div className="testimonials-grid">
         {reviews.map((rev, idx) => (
-          <div key={idx} className="testimonial-card">
+          <div
+            key={idx}
+            className="testimonial-card"
+            data-reveal
+            data-reveal-delay={idx * 120}
+          >
             <div className="rating-row">{rev.rating}</div>
             <p className="testimonial-comment">"{rev.comment}"</p>
             <div className="testimonial-profile">
               <div className="profile-initials">
-                {rev.name.split(' ').map(n=>n[0]).join('')}
+                {rev.name.split(' ').map(n => n[0]).join('')}
               </div>
               <div className="profile-info">
                 <h4>{rev.name}</h4>

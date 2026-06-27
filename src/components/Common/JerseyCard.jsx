@@ -36,7 +36,7 @@ const JerseyCard = ({ product }) => {
         <div className="jersey-card-footer">
           <span className="jersey-price">{product.price}</span>
           <a
-            href={`https://wa.me/919876543210?text=${encodeURIComponent(whatsappMessage)}`}
+            href={`https://wa.me/919373874400?text=${encodeURIComponent(whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="enquire-btn"

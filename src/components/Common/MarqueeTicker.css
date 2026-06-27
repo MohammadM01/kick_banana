@@ -1,0 +1,62 @@
+.marquee-root {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  overflow: hidden;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+
+/* Fade edges */
+.marquee-root::before,
+.marquee-root::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee-root::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--primary), transparent);
+}
+.marquee-root::after {
+  right: 0;
+  background: linear-gradient(-90deg, var(--primary), transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 0;
+  animation: marquee 28s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 18px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.88);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.marquee-dot {
+  color: rgba(210, 154, 56, 0.7);
+  font-size: 1rem;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-root:hover .marquee-track {
+  animation-play-state: paused;
+}

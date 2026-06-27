@@ -1,0 +1,33 @@
+.page-transition {
+  will-change: transform, opacity;
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-transition--idle {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.page-transition--exit {
+  transform: translateY(12px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page-transition--enter {
+  transform: translateY(-12px);
+  opacity: 0;
+  animation: pageEnter 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
